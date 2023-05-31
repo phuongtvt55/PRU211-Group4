@@ -13,12 +13,15 @@ public class TouchingDirections : MonoBehaviour
     RaycastHit2D[] groundHits = new RaycastHit2D[5];
     RaycastHit2D[] wallHits = new RaycastHit2D[5];
     RaycastHit2D[] ceilingHits = new RaycastHit2D[5];
-    Collider2D touchingCol;
+    CapsuleCollider2D touchingCol;
     Animator animator;
 
     //Check ground
     public Transform groundCheck;
     public LayerMask groundLayer;
+    //Check wall
+    public Transform wallCheck;
+    public LayerMask wallLayer; 
 
     [SerializeField]
     private bool _isGrounded;
@@ -74,7 +77,7 @@ public class TouchingDirections : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        touchingCol = GetComponent<Collider2D>();
+        touchingCol = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
     }
 
@@ -82,8 +85,10 @@ public class TouchingDirections : MonoBehaviour
     void FixedUpdate()
     {
         //IsGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        //IsOnWall = Physics2D.OverlapCircle(wallCheck.position, 0.2f, wallLayer);
         IsGrounded = touchingCol.Cast(Vector2.down, contactFilter, groundHits, groundDistance) > 0;
-        IsOnWall = touchingCol.Cast(wallCheckDirection, contactFilter, wallHits, wallDistance) > 0;
-        IsOnCeiling = touchingCol.Cast(Vector2.up, contactFilter, ceilingHits, ceilingDistance) > 0;
+        IsOnWall = touchingCol.Cast(wallCheckDirection, contactFilter, wallHits, wallDistance) > 0.01;
+
+        IsOnCeiling = touchingCol.Cast(Vector2.up, contactFilter, ceilingHits, ceilingDistance) > 0.01;
     }
 }
