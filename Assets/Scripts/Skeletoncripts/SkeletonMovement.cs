@@ -1,10 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class SkeletonMovement : MonoBehaviour
 {
-    [Header ("EnemyMove")]
+    public AIPath Aipath;
+
+    [Header("SkeleZoon")]
+    [SerializeField]
+    private PlayerInSkeleAtckZoon HavePlayer;
+
+    [SerializeField]
+    private SkeleSeePlayer SeePlayer;
+
+[Header ("EnemyMove")]
     [SerializeField] private Transform maxleft;
     [SerializeField] private Transform maxright;
     [SerializeField] private Transform Enemy;
@@ -14,40 +24,68 @@ public class SkeletonMovement : MonoBehaviour
     private float TimerCount;
     [SerializeField] private float StopTime;
     private bool moveTrue;
-    [Header ("EnemyMoveAnima")]
-    [SerializeField] private Animator anima;
+    
+    [Header("SkeleAnim")]
+    [SerializeField]
+    private Animator Anim;
 
-    [Header ("CheckPlayer")]
-    [SerializeField] PlayerInSkeleAtckZoon InatckZoon;
+    [Header("CheckPlayer")]
+    [SerializeField]
+    PlayerInSkeleAtckZoon InatckZoon;
 
-    private void Awake() {
-        anima = GetComponent<Animator>();
+    private void Awake()
+    {
+        Anim = GetComponent<Animator>();
     }
 
-    private void Update() {
-        if(!InatckZoon.havePlayer){
-            anima.SetBool("move",true);
-            anima.SetBool("Atck",false);
-            if(moveTrue){
-                if(Enemy.position.x >= maxleft.position.x){
+    void Update()
+    {
+        Move();
+    }
+
+    public void Move()
+    {
+        if (!SeePlayer.seePLayer)
+        {
+            Aipath.enabled = false;
+            if (!InatckZoon.havePlayer)
+        {
+            Anim.SetBool("move", true);
+            Anim.SetBool("Atck", false);
+            if (moveTrue)
+            {
+                if (Enemy.position.x >= maxleft.position.x)
+                {
                     MoveDirection(-1);
-                }else{
+                }
+                else
+                {
                     DirectionChange();
                 }
             }
-            else{
-                if(Enemy.position.x<= maxright.position.x){
+            else
+            {
+                if (Enemy.position.x <= maxright.position.x)
+                {
                     MoveDirection(1);
-                }else{
+                }
+                else
+                {
                     DirectionChange();
                 }
             }
-        }else{
-            anima.SetBool("Atck",true);
-            anima.SetBool("move",false);
+        }
+        else
+        {
+            Anim.SetBool("Atck", true);
+            Anim.SetBool("move", false);
+        }
+        }
+        else if(SeePlayer.seePLayer){
+             Aipath.enabled = true;
+             AiPathSide();
         }
     }
-    
     public void DirectionChange( )
     {
         TimerCount += Time.deltaTime;
@@ -66,4 +104,15 @@ public class SkeletonMovement : MonoBehaviour
             Enemy.position.z);
     }
 
+    public void AiPathSide()
+    {
+        if (Aipath.desiredVelocity.x >= 0.01f)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (Aipath.desiredVelocity.x <= -0.01f)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+    }
 }
