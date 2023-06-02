@@ -57,7 +57,7 @@ public class DamageManage : MonoBehaviour
     [SerializeField]
     private bool _isUntouchable = false;
     private float timeHit = 0;
-    private float untouchableTime = 0.25f;
+    private float untouchableTime = 0.5f;
 
     public bool IsUntouchable
     {
@@ -93,12 +93,17 @@ public class DamageManage : MonoBehaviour
         //TakeDame(10);
     }
 
-    public void TakeDame(int damage)
+    public bool TakeDame(int damage)
     {
         if(IsAlive && !IsUntouchable)
         {
             CurrentHeath -= damage;
-            IsUntouchable = true;   
+            IsUntouchable = true;
+            animator.SetTrigger(AnimationString.hitTrigger);
+            return true;
         }
+        
+        return false;
+        
     }
 }

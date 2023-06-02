@@ -5005,6 +5005,18 @@ PrefabInstance:
       propertyPath: wallDistance
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7283922603812745723, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8216888313971601807, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: m_Size.x
+      value: 3.5497508
+      objectReference: {fileID: 0}
+    - target: {fileID: 8216888313971601807, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.0733333
+      objectReference: {fileID: 0}
     - target: {fileID: 8216888313971601807, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -5122,6 +5134,10 @@ PrefabInstance:
     - target: {fileID: 7969359080655908266, guid: 870e67fd13b43774b8c0fc441b98d8b2, type: 3}
       propertyPath: groundCheck
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167212794747365959, guid: 870e67fd13b43774b8c0fc441b98d8b2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
