@@ -118,6 +118,7 @@ public class SkeletonMovement : MonoBehaviour
 
     public void DirectionChange()
     {
+        Anim.SetBool("move", false);
         TimerCount += Time.deltaTime;
         if (StopTime < TimerCount)
             moveTrue = !moveTrue;
