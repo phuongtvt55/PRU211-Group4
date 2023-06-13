@@ -16,6 +16,7 @@ public class AttackController : MonoBehaviour
             bool hit = damage.TakeDame(attackDame);    
             if (hit)
             {
+                Debug.Log(attackDame);
                 Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
                 rb.velocity = new Vector2(knockBack.x, rb.velocity.y + knockBack.y);
             }
