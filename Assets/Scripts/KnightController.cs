@@ -10,6 +10,7 @@ public class KnightController : MonoBehaviour
     public float walkSpeed = 3f;
     public float stopRate = 0.05f;
     public DetectedZone zoneAttack;
+    public DetectedZone groundDetect;
     Rigidbody2D rb;
     Animator animator;
     TouchingDirections touchingDirections;
@@ -48,6 +49,7 @@ public class KnightController : MonoBehaviour
         }
         set
         {
+           
             animator.SetBool(AnimationString.hasTarget, value);
             _hasTarget = value;
         }
@@ -75,7 +77,7 @@ public class KnightController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall)
+        if (touchingDirections.IsGrounded && touchingDirections.IsOnWall || groundDetect.detectedColliders.Count == 0)
         {
             Flip();
         }
