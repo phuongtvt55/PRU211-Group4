@@ -136,6 +136,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -143,19 +155,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 112
-        width: 22
-        height: 26
+        x: 0
+        y: 111
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 619bd29764fa02710800000000000000
-      internalID: 1666524579342694678
+      spriteID: 5594c746f18304240b3e0b54990a8c63
+      internalID: -283672681
       vertices: []
       indices: 
       edges: []
@@ -164,19 +176,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 112
-        width: 22
-        height: 25
+        x: 50
+        y: 111
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 49241d15e5bc90d60800000000000000
-      internalID: 7857034630884573844
+      spriteID: 749e7dc1791aed847ad30247f15f793b
+      internalID: 49529568
       vertices: []
       indices: 
       edges: []
@@ -185,19 +197,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_2
       rect:
         serializedVersion: 2
-        x: 117
-        y: 112
-        width: 24
-        height: 24
+        x: 100
+        y: 111
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0b75e347e1ab493d0800000000000000
-      internalID: -3200728795191552080
+      spriteID: a6dd9fdf3f9c6a54ea0f0ee41e7f917d
+      internalID: 2080883126
       vertices: []
       indices: 
       edges: []
@@ -206,19 +218,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_3
       rect:
         serializedVersion: 2
-        x: 164
-        y: 112
-        width: 30
-        height: 25
+        x: 150
+        y: 111
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e9a8c9df4b11a9800800000000000000
-      internalID: 619827367763544734
+      spriteID: e0f8b56e61699c046a0ccc42979a14bd
+      internalID: 339184823
       vertices: []
       indices: 
       edges: []
@@ -227,19 +239,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_4
       rect:
         serializedVersion: 2
-        x: 14
-        y: 75
-        width: 25
-        height: 26
+        x: 0
+        y: 74
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7404345bcd3bf7d10800000000000000
-      internalID: 2125615309657423943
+      spriteID: 38f1295651581a44f9cce68495502ff6
+      internalID: -1543486008
       vertices: []
       indices: 
       edges: []
@@ -248,19 +260,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_5
       rect:
         serializedVersion: 2
-        x: 65
-        y: 75
-        width: 23
-        height: 25
+        x: 50
+        y: 74
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b852452a44c16e830800000000000000
-      internalID: 4099995591874192779
+      spriteID: b50da8dfe24555d4d859107846c2da36
+      internalID: -1211362604
       vertices: []
       indices: 
       edges: []
@@ -269,19 +281,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_6
       rect:
         serializedVersion: 2
-        x: 114
-        y: 75
-        width: 25
-        height: 26
+        x: 100
+        y: 74
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 84b1fa7b021086590800000000000000
-      internalID: -7680887924448093368
+      spriteID: 0bf3d09b02ee350428234d31a8261264
+      internalID: -1578704288
       vertices: []
       indices: 
       edges: []
@@ -290,19 +302,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_7
       rect:
         serializedVersion: 2
-        x: 161
-        y: 75
-        width: 36
-        height: 26
+        x: 150
+        y: 74
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c6bea19507c4c4900800000000000000
-      internalID: 669994489986345836
+      spriteID: a8d74f159cb85584f8e14aa69f8ea0ed
+      internalID: 112712633
       vertices: []
       indices: 
       edges: []
@@ -311,19 +323,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_8
       rect:
         serializedVersion: 2
-        x: 15
-        y: 38
-        width: 29
-        height: 26
+        x: 0
+        y: 37
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8d08b7d20d64ebd60800000000000000
-      internalID: 7907835855639380184
+      spriteID: 328727d54f90a1e478ad3e4eae4d7b62
+      internalID: 364850746
       vertices: []
       indices: 
       edges: []
@@ -332,19 +344,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_9
       rect:
         serializedVersion: 2
-        x: 68
-        y: 40
-        width: 23
-        height: 25
+        x: 50
+        y: 37
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b552664cc3aaebe0800000000000000
-      internalID: -1447164232496687691
+      spriteID: a1a04f3474b83374cae6ab6497d49b42
+      internalID: -967644960
       vertices: []
       indices: 
       edges: []
@@ -353,19 +365,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_10
       rect:
         serializedVersion: 2
-        x: 114
-        y: 43
-        width: 30
-        height: 23
+        x: 100
+        y: 37
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 1b51df9fb992f5180800000000000000
-      internalID: -9124528570138552911
+      spriteID: 69fdcaf7515cddd49954f32674953af7
+      internalID: -103455911
       vertices: []
       indices: 
       edges: []
@@ -374,19 +386,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_11
       rect:
         serializedVersion: 2
-        x: 163
-        y: 43
-        width: 26
-        height: 24
+        x: 150
+        y: 37
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 01637c4b1eb71efe0800000000000000
-      internalID: -1161511019554064880
+      spriteID: f6aa5f5c09ae6274eb2915d37a0188cb
+      internalID: 891579954
       vertices: []
       indices: 
       edges: []
@@ -395,19 +407,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_12
       rect:
         serializedVersion: 2
-        x: 11
-        y: 4
-        width: 27
-        height: 25
+        x: 0
+        y: 0
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 8c15d8726506eaf50800000000000000
-      internalID: 6894554002697834952
+      spriteID: 98c97c6ebb2a6654eb796a111ac4dcdc
+      internalID: -1658306423
       vertices: []
       indices: 
       edges: []
@@ -416,19 +428,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_13
       rect:
         serializedVersion: 2
-        x: 61
-        y: 4
-        width: 36
-        height: 26
+        x: 50
+        y: 0
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 568af56c16de432a0800000000000000
-      internalID: -6758516136580503451
+      spriteID: cdec9cbf2c96e7849ab8aa0d04e4ac36
+      internalID: 831882867
       vertices: []
       indices: 
       edges: []
@@ -437,19 +449,19 @@ TextureImporter:
       name: adventurer-bow-Sheet_14
       rect:
         serializedVersion: 2
-        x: 110
-        y: 4
-        width: 34
-        height: 26
+        x: 100
+        y: 0
+        width: 50
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d0f56bc87b20a6890800000000000000
-      internalID: -7464150445050142963
+      spriteID: 5c0f64527661f604583e4b5df8994649
+      internalID: -92584160
       vertices: []
       indices: 
       edges: []
@@ -457,7 +469,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 99e022b01bad37146aa1749c9e9b0dfe
     internalID: 0
     vertices: []
     indices: 
@@ -465,7 +477,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      boost optimum_0: 7619911160248684242
+      adventurer-bow-Sheet_0: -283672681
+      adventurer-bow-Sheet_1: 49529568
+      adventurer-bow-Sheet_10: -103455911
+      adventurer-bow-Sheet_11: 891579954
+      adventurer-bow-Sheet_12: -1658306423
+      adventurer-bow-Sheet_13: 831882867
+      adventurer-bow-Sheet_14: -92584160
+      adventurer-bow-Sheet_2: 2080883126
+      adventurer-bow-Sheet_3: 339184823
+      adventurer-bow-Sheet_4: -1543486008
+      adventurer-bow-Sheet_5: -1211362604
+      adventurer-bow-Sheet_6: -1578704288
+      adventurer-bow-Sheet_7: 112712633
+      adventurer-bow-Sheet_8: 364850746
+      adventurer-bow-Sheet_9: -967644960
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
