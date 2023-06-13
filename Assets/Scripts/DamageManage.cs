@@ -57,7 +57,8 @@ public class DamageManage : MonoBehaviour
     [SerializeField]
     private bool _isUntouchable = false;
     private float timeHit = 0;
-    private float untouchableTime = 0.5f;
+    [SerializeField]
+    private float untouchableTime;
 
     public bool IsUntouchable
     {
