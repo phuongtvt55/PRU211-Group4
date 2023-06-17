@@ -1,16 +1,14 @@
-using System.Data;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class SkeletonMovement : MonoBehaviour
+
+public class WizardMovement : MonoBehaviour
 {
     public AIPath Aipath;
 
-    
-
-    [Header("SkeleZoon")]
+    [Header("WizradZoon")]
     [SerializeField]
     private PlayerInSkeleAtckZoon HavePlayer;
 
@@ -22,10 +20,7 @@ public class SkeletonMovement : MonoBehaviour
 
     [Header("EnemyMove")]
     [SerializeField]
-    private Transform maxleft;
-
-    [SerializeField]
-    private Transform maxright;
+    private Transform FirstPlace;
 
     [SerializeField]
     private Transform Enemy;
@@ -59,10 +54,11 @@ public class SkeletonMovement : MonoBehaviour
         Alive();
     }
 
-    private void Alive(){
+    private void Alive()
+    {
         if (!damageManage.IsAlive)
         {
-        Aipath.enabled = false;
+            Aipath.enabled = false;
         }
     }
     public void Move()
@@ -76,7 +72,7 @@ public class SkeletonMovement : MonoBehaviour
                 NotAtck();
                 if (moveTrue)
                 {
-                    if (Enemy.position.x >= maxleft.position.x)
+                    if (Enemy.position.x >= FirstPlace.position.x)
                     {
                         MoveDirection(-1);
                     }
@@ -87,7 +83,7 @@ public class SkeletonMovement : MonoBehaviour
                 }
                 else
                 {
-                    if (Enemy.position.x <= maxright.position.x)
+                    if (Enemy.position.x <= FirstPlace.position.x)
                     {
                         MoveDirection(1);
                     }
@@ -96,10 +92,11 @@ public class SkeletonMovement : MonoBehaviour
                         DirectionChange();
                     }
                 }
+
             }
             else
             {
-               Atck();
+                Atck();
             }
         }
         else if (SeePlayer.seePLayer)
@@ -109,11 +106,11 @@ public class SkeletonMovement : MonoBehaviour
             AiPathSide();
             if (!InatckZoon.havePlayer)
             {
-               NotAtck();
+                NotAtck();
             }
             else
             {
-               Atck();
+                Atck();
             }
         }
 
@@ -129,18 +126,16 @@ public class SkeletonMovement : MonoBehaviour
         Anim.SetBool("move", true);
         Anim.SetBool("Atck", false);
     }
-
     public void DirectionChange()
     {
         Anim.SetBool("move", false);
-        TimerCount += Time.deltaTime;
-        if (StopTime < TimerCount)
-            moveTrue = !moveTrue;
+        if (Enemy.position.x != FirstPlace.position.x)
+        {
+            moveTrue = true;
+        }
     }
-
     public void MoveDirection(int _direction)
     {
-        TimerCount = 0;
         Enemy.localScale = new Vector3(
             Mathf.Abs(transform.localScale.x) * _direction,
             transform.localScale.y,
@@ -167,19 +162,42 @@ public class SkeletonMovement : MonoBehaviour
 
     public void MovefollowAI()
     {
-        Enemy.transform.position = new Vector3(
-            Aipath.transform.position.x,
+        if (Enemy.localScale.x > 0)
+        {
+            Enemy.transform.position = new Vector3(
+            (Aipath.transform.position.x) - 1,
             transform.position.y,
             transform.position.z
         );
+        }
+        else
+        {
+            Enemy.transform.position = new Vector3(
+           (Aipath.transform.position.x) + 1,
+           transform.position.y,
+           transform.position.z);
+        }
+
     }
 
     public void AImovetoSkeleton()
     {
-        Aipath.transform.position = new Vector3(
-            Enemy.transform.position.x,
+        if (Enemy.localScale.x > 0)
+        {
+            Aipath.transform.position = new Vector3(
+            (Enemy.transform.position.x)+1,
             transform.position.y,
             transform.position.z
-        );
+            );
+        }
+        else
+        {
+            Aipath.transform.position = new Vector3(
+            (Enemy.transform.position.x)-1,
+            transform.position.y,
+            transform.position.z
+            );
+        }
+
     }
 }
