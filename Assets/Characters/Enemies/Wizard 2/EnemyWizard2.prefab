@@ -105,7 +105,7 @@ EdgeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156238044619956417}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -310,6 +310,7 @@ Transform:
   - {fileID: 3279152583809559603}
   - {fileID: 3621997613253898913}
   - {fileID: 8821132479075264187}
+  - {fileID: 3091133961139731023}
   m_Father: {fileID: 1607233721062394462}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -496,6 +497,131 @@ MonoBehaviour:
   StopTime: 0
   Anim: {fileID: 3094249917759393534}
   InatckZoon: {fileID: 7317199575269737119}
+--- !u!1 &4047963440737622532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3091133961139731023}
+  - component: {fileID: 1735061745639566155}
+  - component: {fileID: 115053419683164487}
+  m_Layer: 10
+  m_Name: Attack2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3091133961139731023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047963440737622532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3895885188440919766}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1735061745639566155
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047963440737622532}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.75616837, y: 0.096627235}
+  - {x: 0.54112244, y: -0.25765967}
+  - {x: 0.6317787, y: -1.2561414}
+  - {x: 1.4583206, y: -1.3134208}
+  - {x: 1.7898903, y: -1.2309332}
+  - {x: 1.9684715, y: -1.2041802}
+  - {x: 2.2727127, y: -0.24648213}
+  - {x: 3.6177597, y: -0.5626633}
+  - {x: 3.0157242, y: -1.4713182}
+  - {x: 2.1431923, y: -1.241754}
+  - {x: 1.6881676, y: -1.6620631}
+  - {x: 1.4350433, y: -2.7282524}
+  - {x: 2.3741493, y: -3.4834528}
+  - {x: 3.2579002, y: -3.5071263}
+  - {x: 4.3082123, y: -3.192649}
+  - {x: 5.794735, y: -2.2300606}
+  - {x: 6.898163, y: 0.54132867}
+  - {x: 5.868374, y: 0.3946743}
+  - {x: 4.8634377, y: -0.94045305}
+  - {x: 5.2184677, y: 0.63089275}
+  - {x: 4.941433, y: 0.7443781}
+  - {x: 4.7025566, y: 0.7650554}
+  - {x: 4.4594, y: 0.9471952}
+  - {x: 3.617012, y: -0.55127716}
+  - {x: 2.6048698, y: -0.11655998}
+  - {x: 2.9974174, y: 0.17908311}
+  - {x: 3.3433151, y: 0.88625395}
+  - {x: 3.6295166, y: 1.6576533}
+  - {x: 3.4324722, y: 1.9847378}
+  - {x: 3.8906898, y: 2.1643353}
+  - {x: 4.357254, y: 1.9153416}
+  - {x: 4.5692444, y: 2.1456697}
+  - {x: 4.438225, y: 2.7269404}
+  - {x: 3.3435173, y: 1.968015}
+  - {x: 3.3695145, y: 2.7842717}
+  - {x: 1.770874, y: 2.9787495}
+  - {x: 1.1479225, y: 2.2574942}
+  - {x: 0.7281532, y: 1.4907825}
+  - {x: 0.72546387, y: 0.3543043}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &115053419683164487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4047963440737622532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb653ed14ceac0a409cc14645a29472c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDame: 10
+  knockBack: {x: 2, y: 0}
 --- !u!1 &5919605213356967827
 GameObject:
   m_ObjectHideFlags: 0
