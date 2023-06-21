@@ -1881,6 +1881,7 @@ GameObject:
   - component: {fileID: 826809906}
   - component: {fileID: 826809905}
   - component: {fileID: 826809904}
+  - component: {fileID: 826809910}
   - component: {fileID: 826809903}
   - component: {fileID: 826809908}
   - component: {fileID: 826809909}
@@ -2082,6 +2083,41 @@ MonoBehaviour:
   pointA: {fileID: 1078921710}
   pointB: {fileID: 401848438}
   speed: 2
+--- !u!70 &826809910
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826809902}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.19, y: 2.84}
+  m_Direction: 0
 --- !u!1 &842825805
 GameObject:
   m_ObjectHideFlags: 0

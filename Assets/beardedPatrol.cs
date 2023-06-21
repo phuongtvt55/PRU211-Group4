@@ -32,12 +32,12 @@ public class beardedPatrol : MonoBehaviour
             rb.velocity = new Vector2(-speed, 0);
         }
 
-        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
+        if(Vector2.Distance(transform.position, currentPoint.position) < 1.5f && currentPoint == pointB.transform)
         {
             flip();
             currentPoint = pointA.transform;
         }
-        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
+        if(Vector2.Distance(transform.position, currentPoint.position) < 1.5f && currentPoint == pointA.transform)
         {
             flip();
             currentPoint = pointB.transform;
