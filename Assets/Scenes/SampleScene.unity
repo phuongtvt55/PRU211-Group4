@@ -342,7 +342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.65, y: -4.95, z: -10}
+  m_LocalPosition: {x: 58.47, y: -4.34, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5797,6 +5797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90a43f65b4be3343a8248e05d3828eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barController: {fileID: 0}
   _maxHeath: 49
   _currentHeath: 49
   _isUntouchable: 0
@@ -5890,6 +5891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5089289233618545218, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8421855999748934501, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5952,9 +5957,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 691397183887837618, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: knockBack.x
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3533853653308731383, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
       propertyPath: m_Name
       value: Knight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089289233618545218, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8421855999748934501, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
       propertyPath: m_RootOrder
@@ -6188,6 +6201,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 691397183887837618, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: knockBack.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 691397183887837618, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: knockBack.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3109835982430916454, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
       propertyPath: m_Size.x
       value: 1.0766046
@@ -6199,6 +6220,10 @@ PrefabInstance:
     - target: {fileID: 3533853653308731383, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
       propertyPath: m_Name
       value: Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089289233618545218, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5366786544675277538, guid: 8e12f6b7f2e18184a8c79739cbb417be, type: 3}
       propertyPath: wallDistance
@@ -6304,11 +6329,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6141131543220868658, guid: 870e67fd13b43774b8c0fc441b98d8b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.65
+      value: 58.47
       objectReference: {fileID: 0}
     - target: {fileID: 6141131543220868658, guid: 870e67fd13b43774b8c0fc441b98d8b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.95
+      value: -4.34
       objectReference: {fileID: 0}
     - target: {fileID: 6141131543220868658, guid: 870e67fd13b43774b8c0fc441b98d8b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6391,11 +6416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3866450250823005282, guid: 3f21101b95797514e9e230d7b9b2825d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 62.65
+      value: 58.47
       objectReference: {fileID: 0}
     - target: {fileID: 3866450250823005282, guid: 3f21101b95797514e9e230d7b9b2825d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.95
+      value: -4.34
       objectReference: {fileID: 0}
     - target: {fileID: 3866450250823005282, guid: 3f21101b95797514e9e230d7b9b2825d, type: 3}
       propertyPath: m_LocalPosition.z

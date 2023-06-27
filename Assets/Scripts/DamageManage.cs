@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DamageManage : MonoBehaviour
 {
+    public HealthBarController barController;
     Animator animator;
     [SerializeField]
     private int _maxHeath = 100;
@@ -34,6 +35,7 @@ public class DamageManage : MonoBehaviour
             if(_currentHeath <= 0)
             {
                 IsAlive = false;
+                Destroy(gameObject);
             }
         }
     }
@@ -76,6 +78,11 @@ public class DamageManage : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
+        if (gameObject.CompareTag("Knight"))
+        {
+            barController.SetHealth(CurrentHeath, MaxHeath);
+        }
+
     }
 
     // Update is called once per frame
@@ -100,6 +107,10 @@ public class DamageManage : MonoBehaviour
         {
             CurrentHeath -= damage;
             IsUntouchable = true;
+            if (gameObject.CompareTag("Knight"))
+            {                
+                barController.SetHealth(CurrentHeath, MaxHeath);
+            }
             animator.SetTrigger(AnimationString.hitTrigger);
             return true;
         }

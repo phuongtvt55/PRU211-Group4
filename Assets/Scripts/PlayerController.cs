@@ -306,6 +306,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnRangedAttack(InputAction.CallbackContext context)
+    {
+        if(context.started && !IsDashing)
+        {
+            animator.SetTrigger(AnimationString.rangedAttackTrigger);
+        }
+    }
+
     public void OnDash(InputAction.CallbackContext context)
     {
         if (context.started && canDash && touchingDirections.IsGrounded && IsRunning)

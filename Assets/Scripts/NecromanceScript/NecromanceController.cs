@@ -44,11 +44,16 @@ public class NecromanceController : MonoBehaviour
         {
             animator.SetBool("oneTime", goStageOneTime);
             goStageOneTime = true;
-            DamageManage dameKnight = knightDamageManager.GetComponent<DamageManage>();
-            if (dameKnight.CurrentHeath > 0)
+            DamageManage dameKnight;
+            if (knightDamageManager != null)
             {
-                necromanceDamageManager.IsUntouchable = true;
+                dameKnight = knightDamageManager.GetComponent<DamageManage>();
+                if (dameKnight.CurrentHeath > 0)
+                {
+                    necromanceDamageManager.IsUntouchable = true;
+                }
             }
+            
         }
         if (!necromanceDamageManager.IsAlive)
         {
@@ -60,8 +65,8 @@ public class NecromanceController : MonoBehaviour
 
     private IEnumerator SpawnEnemy()
     {
-        yield return new WaitForSeconds(3);
-        knightDamageManager = Instantiate(knight, player.position, Quaternion.identity);
+        yield return new WaitForSeconds(4);
+        knightDamageManager = Instantiate(knight, transform.position, Quaternion.identity);
         isSpawnEneny = true;    
     }
 
