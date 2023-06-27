@@ -15,7 +15,7 @@ public class DialogueTrigger : MonoBehaviour
         if(collision.tag == "Player")
         {
             playerDetected = true;
-            dialogueScript.ToggleIndicator(playerDetected);
+            dialogueScript.ToggleIndicator(playerDetected);      
         }
     }
 
