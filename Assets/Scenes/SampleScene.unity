@@ -5798,10 +5798,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barController: {fileID: 0}
-  _maxHeath: 49
-  _currentHeath: 49
+  _maxHeath: 100
+  _currentHeath: 100
   _isUntouchable: 0
-  untouchableTime: 0.3
+  untouchableTime: 0.5
 --- !u!50 &1486477601
 Rigidbody2D:
   serializedVersion: 4

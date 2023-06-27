@@ -35,10 +35,17 @@ public class DamageManage : MonoBehaviour
             if(_currentHeath <= 0)
             {
                 IsAlive = false;
-                Destroy(gameObject);
+                StartCoroutine(DestroyObject());
             }
         }
     }
+
+    private IEnumerator DestroyObject()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
+    }
+
 
     private bool _isAlive = true;
 
