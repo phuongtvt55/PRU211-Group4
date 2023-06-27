@@ -16,7 +16,7 @@ public class Patrol : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         currentPoint = pointB.transform;
-        anim.SetBool("isWalking", true);
+        anim.SetBool("IsWalking", true);
     }
 
     // Update is called once per frame

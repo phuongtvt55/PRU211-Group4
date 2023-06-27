@@ -16,8 +16,8 @@ public class DialogueTrigger : MonoBehaviour
         {
             playerDetected = true;
             dialogueScript.ToggleIndicator(playerDetected);
-            anim.SetBool("isStanding", true);
-            anim.SetBool("isWalking", false);
+            anim.SetBool("IsStanding", true);
+            anim.SetBool("IsWalking", false);
         }
     }
 
@@ -29,8 +29,8 @@ public class DialogueTrigger : MonoBehaviour
             playerDetected = false;
             dialogueScript.ToggleIndicator(playerDetected);
             dialogueScript.EndDialogue();
-            anim.SetBool("isStanding", false);
-            anim.SetBool("isWalking", true);
+            anim.SetBool("IsStanding", false);
+            anim.SetBool("IsWalking", true);
         }
     }
     //While detected if we interact start the dialogue
