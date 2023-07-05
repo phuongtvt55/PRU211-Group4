@@ -1235,6 +1235,7 @@ MonoBehaviour:
   pointB: {fileID: 169358786}
   player: {fileID: 585096933}
   speed: 2
+  textWindow: {fileID: 57571504}
 --- !u!111 &523845475
 Animation:
   m_ObjectHideFlags: 0
@@ -2165,6 +2166,7 @@ MonoBehaviour:
   pointB: {fileID: 1270878199}
   player: {fileID: 585096933}
   speed: 2
+  textWindow: {fileID: 331580624}
 --- !u!111 &761716512
 Animation:
   m_ObjectHideFlags: 0
@@ -2614,6 +2616,7 @@ MonoBehaviour:
   pointB: {fileID: 1642352169}
   player: {fileID: 585096933}
   speed: 2
+  textWindow: {fileID: 1922768809}
 --- !u!111 &796556323
 Animation:
   m_ObjectHideFlags: 0
@@ -3111,6 +3114,7 @@ MonoBehaviour:
   pointB: {fileID: 401848438}
   player: {fileID: 585096933}
   speed: 2
+  textWindow: {fileID: 1440497142}
 --- !u!50 &826809912
 Rigidbody2D:
   serializedVersion: 4

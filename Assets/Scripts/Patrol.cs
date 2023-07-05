@@ -14,6 +14,8 @@ public class Patrol : MonoBehaviour
     private bool playerDetected;
     private Dialogue dialogue;
     private bool check;
+    [SerializeField]
+    private GameObject textWindow;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,7 @@ public class Patrol : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+        textWindow.transform.localScale = localScale;
     }
 
     private void OnDrawGizmos()
