@@ -7,12 +7,15 @@ public class GolemMovement : MonoBehaviour
     [Header("GolemZoon")]
     [SerializeField]
     private PlayerInSkeleAtckZoon HavePlayer;
+    
+    [SerializeField] private RespawnRangeatck respawn;
 
     [SerializeField]
     private SkeleSeePlayer SeePlayer;
 
     [SerializeField]
     private GolemRangeAtckZoon RangeAtckZoon;
+
 
     [SerializeField]
     [Header("Hp")]
@@ -31,8 +34,14 @@ public class GolemMovement : MonoBehaviour
         Active();
         CloseAtck();
         RangeAtck();
-    }
-
+    } 
+IEnumerator DelayAction(float delayTime)
+{
+   //Wait for the specified delay time before continuing.
+   yield return new WaitForSeconds(delayTime);
+ 
+   //Do the action after the delay time has finished.
+}
     public void CloseAtck()
     {
         if (HavePlayer.havePlayer)
@@ -49,12 +58,16 @@ public class GolemMovement : MonoBehaviour
     {
         if (RangeAtckZoon.InRangeAtck)
         {
+
             Anim.SetBool("RangeAtck",true);
         }
         else
         {
             Anim.SetBool("RangeAtck",false);
         }
+    }
+    public void Respawn(){ 
+            respawn.Respawn();
     }
     public void Active( )
     {

@@ -5,13 +5,17 @@ using UnityEngine;
 public class GolemRangeAtckZoon : MonoBehaviour
 {
     public bool InRangeAtck;
+    
+
+    [SerializeField] private RangeScripts range;
     void OnTriggerEnter2D(Collider2D Player)
     {
         if(Player.tag =="Player"){
             InRangeAtck=true;
-        }
     }
-    private void OnTriggerExit2D(Collider2D Player) {
+}
+
+    void OnTriggerExit2D(Collider2D Player) {
         if(Player.tag =="Player"){
             InRangeAtck=false;
         }
