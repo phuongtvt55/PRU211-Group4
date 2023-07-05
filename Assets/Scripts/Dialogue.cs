@@ -78,7 +78,7 @@ public class Dialogue : MonoBehaviour
         //Stop all Ienumerators
         StopAllCoroutines();
         //Hide the window
-        ToggleWindow(false);        
+        ToggleWindow(false);
     }
     //Writing logic
     IEnumerator Writing()
@@ -91,7 +91,7 @@ public class Dialogue : MonoBehaviour
         //increase the character index 
         charIndex++;
         //Make sure you have reached the end of the sentence
-        if(charIndex < currentDialogue.Length)
+        if (charIndex < currentDialogue.Length)
         {
             //Wait x seconds 
             yield return new WaitForSeconds(writingSpeed);
@@ -102,7 +102,7 @@ public class Dialogue : MonoBehaviour
         {
             //End this sentence and wait for the next one
             waitForNext = true;
-        }        
+        }
     }
 
     private void Update()
@@ -110,13 +110,13 @@ public class Dialogue : MonoBehaviour
         if (!started)
             return;
 
-        if(waitForNext && Input.GetKeyDown(KeyCode.E))
+        if (waitForNext && Input.GetKeyDown(KeyCode.E))
         {
             waitForNext = false;
             index++;
 
             //Check if we are in the scope fo dialogues List
-            if(index < dialogues.Count)
+            if (index < dialogues.Count)
             {
                 //If so fetch the next dialogue
                 GetDialogue(index);
@@ -126,8 +126,7 @@ public class Dialogue : MonoBehaviour
                 //If not end the dialogue process
                 ToggleIndicator(true);
                 EndDialogue();
-            }            
+            }
         }
     }
-
 }
