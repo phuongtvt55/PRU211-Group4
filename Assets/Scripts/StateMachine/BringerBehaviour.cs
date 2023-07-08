@@ -1,44 +1,41 @@
-using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitTimeController : StateMachineBehaviour
+public class BringerBehaviour : StateMachineBehaviour
 {
-    private NecromanceController necromance;
     private BringerController bringer;
-    float count;
+    private Rigidbody2D rb;
+    [SerializeField]
+    private float movement;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        necromance = animator.GetComponent<NecromanceController>();
-        bringer = animator.GetComponent <BringerController>();   
-        count++;
-        if(count == 3)
-        {
-            
-            animator.SetTrigger(AnimationString.attackTrigger);
-            if(necromance != null) {
-                necromance.FollowPlayer();
-            }
-            if(bringer != null) {
-                bringer.FollowPlayer();
-            }
-            count = 0;  
-        }
+        bringer = animator.GetComponent<BringerController>();
+        rb = bringer.GetComponent<Rigidbody2D>();
+        bringer.FollowPlayer();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        bringer.FollowPlayer();
+        bool isFacingRight = bringer.isFacingRight;
+        if (isFacingRight)
+        {
+            rb.velocity = new Vector2(movement, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(-movement, rb.velocity.y);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        rb.velocity = new Vector2(0, rb.velocity.y);
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

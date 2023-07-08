@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "CastSpell",
+                    "type": "Button",
+                    "id": "c0d37975-a6dc-40a4-a5a3-c013a747b509",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -300,6 +309,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "RangedAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6543a18b-6875-4fc4-b9cd-3e8ab9ccf75c",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CastSpell",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

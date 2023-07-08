@@ -1,38 +1,31 @@
-using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitTimeController : StateMachineBehaviour
+public class BringerSpellBehaviour : StateMachineBehaviour
 {
-    private NecromanceController necromance;
-    private BringerController bringer;
-    float count;
+    [SerializeField]
+    private GameObject spell;
+    [SerializeField]
+    private float offsetY;
+    private BringerController bringerController;
+    private Transform player;
+    DamageManage damageManage;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        necromance = animator.GetComponent<NecromanceController>();
-        bringer = animator.GetComponent <BringerController>();   
-        count++;
-        if(count == 3)
-        {
-            
-            animator.SetTrigger(AnimationString.attackTrigger);
-            if(necromance != null) {
-                necromance.FollowPlayer();
-            }
-            if(bringer != null) {
-                bringer.FollowPlayer();
-            }
-            count = 0;  
-        }
+        bringerController = animator.GetComponent<BringerController>();
+        player = bringerController.player;
+        bringerController.FollowPlayer();
+        Vector2 positionSpell = new Vector2(player.position.x + 2, player.position.y + offsetY);
+        Instantiate(spell, positionSpell, Quaternion.identity);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        
-    }
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

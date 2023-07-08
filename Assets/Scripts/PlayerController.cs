@@ -125,6 +125,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool _castSpell;
+    public bool CastSpell
+    {
+        set
+        {
+            _castSpell = value;
+            animator.SetBool(AnimationString.isCastSpell, value);
+        }
+        get
+        {
+            return _castSpell;  
+        }
+    }
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -163,14 +177,15 @@ public class PlayerController : MonoBehaviour
         }
 
         //Move when is grounded or air
-        if (touchingDirections.IsGrounded)
+        if (touchingDirections.IsGrounded && CanMove)
         {
-                rb.velocity = new Vector2(moveInput.x * CurrentSpeed, rb.velocity.y);
+            rb.velocity = new Vector2(moveInput.x * CurrentSpeed, rb.velocity.y);
         }
         else if (!isWallJumping && !touchingDirections.IsGrounded && moveInput.x != 0 && !isWallSliding && (moveInput.x > 0 && IsFacingRight) || (moveInput.x < 0 && !IsFacingRight))
         {
             rb.velocity = new Vector2(moveInput.x * CurrentSpeed, rb.velocity.y);
         }
+       
 
         //Gravity fall
         if (rb.velocity.y < 0)
@@ -301,7 +316,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.started && !IsDashing)
         {
-   
+            rb.velocity = new Vector2(0, rb.velocity.y);
             animator.SetTrigger(AnimationString.attackTrigger);
         }
     }
@@ -320,5 +335,20 @@ public class PlayerController : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+    }
+
+    public void OnCastSpell(InputAction.CallbackContext context)
+    {
+        if (context.started && touchingDirections.IsGrounded)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            CastSpell = true;
+        }
+        else if(context.canceled && touchingDirections.IsGrounded) {
+            CastSpell = false;  
+        }
+        
+           
+       
     }
 }

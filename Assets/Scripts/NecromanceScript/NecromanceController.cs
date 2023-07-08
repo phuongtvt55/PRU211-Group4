@@ -10,7 +10,7 @@ public class NecromanceController : MonoBehaviour
     public Transform player;
     public bool isFacingRight = true;
     DamageManage necromanceDamageManager;
-    private GameObject knightDamageManager;
+    private GameObject bringerOfDealth;
     [SerializeField]
     private GameObject knight;
     private bool isStage2 = false;
@@ -44,11 +44,11 @@ public class NecromanceController : MonoBehaviour
         {
             animator.SetBool("oneTime", goStageOneTime);
             goStageOneTime = true;
-            DamageManage dameKnight;
-            if (knightDamageManager != null)
+            DamageManage dameBringer;
+            if (bringerOfDealth != null)
             {
-                dameKnight = knightDamageManager.GetComponent<DamageManage>();
-                if (dameKnight.CurrentHeath > 0)
+                dameBringer = bringerOfDealth.GetComponent<DamageManage>();
+                if (dameBringer.CurrentHeath > 0)
                 {
                     necromanceDamageManager.IsUntouchable = true;
                 }
@@ -66,7 +66,7 @@ public class NecromanceController : MonoBehaviour
     private IEnumerator SpawnEnemy()
     {
         yield return new WaitForSeconds(4);
-        knightDamageManager = Instantiate(knight, transform.position, Quaternion.identity);
+        bringerOfDealth = Instantiate(knight, transform.position, Quaternion.identity);
         isSpawnEneny = true;    
     }
 

@@ -680,6 +680,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 9383deac-ce5f-449d-b607-61ab44b7fa5d
     m_ActionName: Player/RangedAttack[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2480323829722027961}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnCastSpell
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c0d37975-a6dc-40a4-a5a3-c013a747b509
+    m_ActionName: Player/CastSpell[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -820,6 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a90a43f65b4be3343a8248e05d3828eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barController: {fileID: 0}
   _maxHeath: 100
   _currentHeath: 100
   _isUntouchable: 0
