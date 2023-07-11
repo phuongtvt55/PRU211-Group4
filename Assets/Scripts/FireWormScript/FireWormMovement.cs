@@ -32,7 +32,7 @@ public class FireWormMovement : MonoBehaviour
 
     [SerializeField]
     private float StopTime;
-    private bool moveTrue;
+    private bool moveTrue ;
 
     [Header("WormAnim")]
     [SerializeField]
@@ -50,6 +50,7 @@ public class FireWormMovement : MonoBehaviour
     void Update()
     {
         Move();
+        // Debug.Log(moveTrue);
     }
 
     public void Move()
@@ -122,6 +123,7 @@ public class FireWormMovement : MonoBehaviour
         TimerCount += Time.deltaTime;
         if (StopTime < TimerCount)
             moveTrue = !moveTrue;
+            Debug.Log(moveTrue);
     }
 
     public void MoveDirection(int _direction)
@@ -153,19 +155,39 @@ public class FireWormMovement : MonoBehaviour
 
     public void MovefollowAI()
     {
-        Enemy.transform.position = new Vector3(
-            Aipath.transform.position.x,
+        if (Enemy.localScale.x > 0)
+        {
+            Enemy.transform.position = new Vector3(
+            (Aipath.transform.position.x) - 1,
             transform.position.y,
             transform.position.z
         );
+        }
+        else
+        {
+            Enemy.transform.position = new Vector3(
+           (Aipath.transform.position.x) + 1,
+           transform.position.y,
+           transform.position.z);
+        }
     }
 
     public void AImovetoWorm()
     {
-        Aipath.transform.position = new Vector3(
-            Enemy.transform.position.x,
+        if (Enemy.localScale.x > 0)
+        {
+            Aipath.transform.position = new Vector3(
+            (Enemy.transform.position.x)+1,
             transform.position.y,
             transform.position.z
-        );
+            );
+        }
+        else
+        {
+            Aipath.transform.position = new Vector3(
+            (Enemy.transform.position.x)-1,
+            transform.position.y,
+            transform.position.z
+            );}
     }
 }
