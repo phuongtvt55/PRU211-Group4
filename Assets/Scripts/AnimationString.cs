@@ -22,5 +22,9 @@ namespace Assets.Scripts
         internal static string isAlive = "isAlive";
         internal static string isDashingTrigger = "isDashing";
         internal static string hitTrigger = "isHit";
+        internal static string distance = "distance";
+        internal static string rangedAttackTrigger = "rangedAttack";
+        internal static string isCastSpell = "isCast";
+        internal static string cutscene = "cutscene";
     }
 }
