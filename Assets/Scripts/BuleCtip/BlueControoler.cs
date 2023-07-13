@@ -11,7 +11,7 @@ public class BlueControoler : MonoBehaviour
     private SeePlayer SeePlayer;
     [SerializeField]
     private FollowPlayer follow;
-    private bool isAlive = true;
+    [SerializeField] private DamageManage damage;
     [Header("EnemyMove")]
     [SerializeField]
     private Transform maxleft;
@@ -44,7 +44,7 @@ public class BlueControoler : MonoBehaviour
 
     private void Update()
     {
-        if (!follow.followPlayer)
+        if (!follow.followPlayer && damage.IsAlive)
         {
             Aipath.enabled = false;
             AImovetoSkeleton();
@@ -79,7 +79,7 @@ public class BlueControoler : MonoBehaviour
                 Atck();
             }
         }
-        else if (follow.followPlayer)
+        else if (follow.followPlayer && damage.IsAlive)
         {
             Aipath.enabled = true;
             MovefollowAI();
@@ -93,7 +93,15 @@ public class BlueControoler : MonoBehaviour
                 Atck();
             }
         }
+        isAlive();
 
+    }
+    private void isAlive()
+    {
+        if (!damage.IsAlive)
+        {
+            Aipath.enabled = false;
+        }
     }
     public void Move()
     {
@@ -123,11 +131,8 @@ public class BlueControoler : MonoBehaviour
 
     public void Atck()
     {
-        if (isAlive)
-        {
-            Anim.SetBool("Attack", true);
-            Anim.SetBool("canWalk", false);
-        }
+        Anim.SetBool("Attack", true);
+        Anim.SetBool("canWalk", false);
     }
     public void NotAtck()
     {
