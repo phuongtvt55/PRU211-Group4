@@ -11,7 +11,7 @@ public class BlueControoler : MonoBehaviour
     private SeePlayer SeePlayer;
     [SerializeField]
     private FollowPlayer follow;
-
+    private bool isAlive = true;
     [Header("EnemyMove")]
     [SerializeField]
     private Transform maxleft;
@@ -123,8 +123,11 @@ public class BlueControoler : MonoBehaviour
 
     public void Atck()
     {
-        Anim.SetBool("Attack", true);
-        Anim.SetBool("canWalk", false);
+        if (isAlive)
+        {
+            Anim.SetBool("Attack", true);
+            Anim.SetBool("canWalk", false);
+        }
     }
     public void NotAtck()
     {
