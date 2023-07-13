@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 988397181}
   pointB: {fileID: 169358786}
-  player: {fileID: 0}
+  player: {fileID: 549961347}
   speed: 2
   textWindow: {fileID: 57571504}
 --- !u!111 &523845475
@@ -1382,6 +1382,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &549961347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7887626542157520724, guid: 870e67fd13b43774b8c0fc441b98d8b2, type: 3}
+  m_PrefabInstance: {fileID: 759981308}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &575749661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2334,7 +2339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 1828517578}
   pointB: {fileID: 1270878199}
-  player: {fileID: 0}
+  player: {fileID: 549961347}
   speed: 2
   textWindow: {fileID: 331580624}
 --- !u!111 &761716512
@@ -2784,7 +2789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 1201878673}
   pointB: {fileID: 1642352169}
-  player: {fileID: 0}
+  player: {fileID: 549961347}
   speed: 2
   textWindow: {fileID: 1922768809}
 --- !u!111 &796556323
@@ -3282,7 +3287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointA: {fileID: 1078921710}
   pointB: {fileID: 401848438}
-  player: {fileID: 0}
+  player: {fileID: 549961347}
   speed: 2
   textWindow: {fileID: 1440497142}
 --- !u!50 &826809912
