@@ -7,6 +7,7 @@ TagManager:
   - Boss
   - Bow
   - Knight
+  - DetectBoss
   layers:
   - Default
   - TransparentFX

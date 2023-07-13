@@ -25,5 +25,6 @@ namespace Assets.Scripts
         internal static string distance = "distance";
         internal static string rangedAttackTrigger = "rangedAttack";
         internal static string isCastSpell = "isCast";
+        internal static string cutscene = "cutscene";
     }
 }

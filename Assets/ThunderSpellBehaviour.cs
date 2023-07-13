@@ -24,8 +24,6 @@ public class ThunderSpellBehaviour : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-        
         Vector2 positionSpell = new Vector2(animator.transform.position.x + (animator.transform.localScale.x > 0 ? 5 : -5) , animator.gameObject.transform.position.y + offsetY);
         Instantiate(spell, positionSpell, Quaternion.identity);
 

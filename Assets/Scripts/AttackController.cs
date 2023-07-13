@@ -11,6 +11,8 @@ public class AttackController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        GameObject parentObject = transform.parent.gameObject;
+        
         DamageManage damage = collision.GetComponent<DamageManage>();
         if (damage != null)
         {
@@ -22,7 +24,15 @@ public class AttackController : MonoBehaviour
                 
                 if (!collision.CompareTag("Boss"))
                 {
-                    rb.velocity = new Vector2(knockBack.x, rb.velocity.y + knockBack.y);
+                    if(parentObject.transform.localScale.x > 0)
+                    {
+                        rb.velocity = new Vector2(knockBack.x, rb.velocity.y + knockBack.y);
+                    }
+                    else
+                    {
+                        rb.velocity = new Vector2(knockBack.x * -1, rb.velocity.y + knockBack.y);
+                    }
+                   
 
                 }
                

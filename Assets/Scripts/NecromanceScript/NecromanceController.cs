@@ -8,7 +8,7 @@ public class NecromanceController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     public Transform player;
-    public bool isFacingRight = true;
+    public bool isFacingRight = false;
     DamageManage necromanceDamageManager;
     private GameObject bringerOfDealth;
     [SerializeField]
