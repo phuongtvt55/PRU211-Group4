@@ -1,3 +1,4 @@
+using System.Data;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,17 @@ public class SkeletonMovement : MonoBehaviour
 {
     public AIPath Aipath;
 
+    
+
     [Header("SkeleZoon")]
     [SerializeField]
     private PlayerInSkeleAtckZoon HavePlayer;
 
     [SerializeField]
     private SkeleSeePlayer SeePlayer;
+
+    [SerializeField]
+    private DamageManage damageManage;
 
     [Header("EnemyMove")]
     [SerializeField]
@@ -50,8 +56,15 @@ public class SkeletonMovement : MonoBehaviour
     void Update()
     {
         Move();
+        Alive();
     }
 
+    private void Alive(){
+        if (!damageManage.IsAlive)
+        {
+        Aipath.enabled = false;
+        }
+    }
     public void Move()
     {
         if (!SeePlayer.seePLayer)
@@ -103,6 +116,7 @@ public class SkeletonMovement : MonoBehaviour
                Atck();
             }
         }
+
     }
 
     public void Atck()
