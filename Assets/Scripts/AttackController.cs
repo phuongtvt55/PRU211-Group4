@@ -11,7 +11,7 @@ public class AttackController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enter");
+        //Debug.Log("Enter");
         GameObject parentObject = transform.parent.gameObject;
         
         DamageManage damage = collision.GetComponent<DamageManage>();

@@ -11,6 +11,8 @@ public class DamageManage : MonoBehaviour
     private int _maxHeath = 100;
     [SerializeField]
     private HealthBarPlayerScript playerHealthBar;
+    [SerializeField]
+    private GameManagerScript gameManagerScript;
     public int MaxHeath
     {
         get
@@ -34,17 +36,23 @@ public class DamageManage : MonoBehaviour
         set
         {
             _currentHeath = value;
-            if(_currentHeath <= 0)
+            if (_currentHeath <= 0)
             {
+                if(gameObject.CompareTag("Player"))
+                {
+                    gameManagerScript.gameOver();
+                }
+                else
+                    StartCoroutine(DestroyObject());
                 IsAlive = false;
-                StartCoroutine(DestroyObject());
+                
             }
         }
     }
 
     private IEnumerator DestroyObject()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
 
@@ -83,6 +91,11 @@ public class DamageManage : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -91,11 +104,11 @@ public class DamageManage : MonoBehaviour
         {
             barController.SetHealth(CurrentHeath, MaxHeath);
         }
+
         if (gameObject.CompareTag("Player"))
         {
             playerHealthBar.InitHealthBar(CurrentHeath);
         }
-
     }
 
     // Update is called once per frame
