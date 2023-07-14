@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1484378767}
-  followTarget: {fileID: 0}
+  followTarget: {fileID: 998216119}
 --- !u!212 &575749664
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2168,7 +2168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1484378767}
-  followTarget: {fileID: 0}
+  followTarget: {fileID: 998216119}
 --- !u!212 &711744688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2985,7 +2985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1484378767}
-  followTarget: {fileID: 0}
+  followTarget: {fileID: 998216119}
 --- !u!212 &808739917
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3615,7 +3615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1484378767}
-  followTarget: {fileID: 0}
+  followTarget: {fileID: 998216119}
 --- !u!212 &883158205
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6020,7 +6020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1484378767}
-  followTarget: {fileID: 0}
+  followTarget: {fileID: 998216119}
 --- !u!212 &1619627669
 SpriteRenderer:
   m_ObjectHideFlags: 0
