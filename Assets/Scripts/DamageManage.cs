@@ -9,6 +9,8 @@ public class DamageManage : MonoBehaviour
     Animator animator;
     [SerializeField]
     private int _maxHeath = 100;
+    [SerializeField]
+    private HealthBarPlayerScript playerHealthBar;
     public int MaxHeath
     {
         get
@@ -89,6 +91,10 @@ public class DamageManage : MonoBehaviour
         {
             barController.SetHealth(CurrentHeath, MaxHeath);
         }
+        if (gameObject.CompareTag("Player"))
+        {
+            playerHealthBar.InitHealthBar(CurrentHeath);
+        }
 
     }
 
@@ -117,6 +123,10 @@ public class DamageManage : MonoBehaviour
             if (gameObject.CompareTag("Knight") || gameObject.CompareTag("Boss"))
             {                
                 barController.SetHealth(CurrentHeath, MaxHeath);
+            }
+            if (gameObject.CompareTag("Player"))
+            {
+                playerHealthBar.ActualHealth(CurrentHeath);
             }
             animator.SetTrigger(AnimationString.hitTrigger);
             return true;
