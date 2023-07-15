@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class SkeleSeePlayer : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D Player) {
         if(Player.tag =="Player"){
+            Debug.Log("out");
             seePLayer=false;
         }
     }

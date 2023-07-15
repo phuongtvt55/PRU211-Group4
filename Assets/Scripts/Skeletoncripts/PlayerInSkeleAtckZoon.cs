@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerInSkeleAtckZoon : MonoBehaviour
 {  
     public bool havePlayer;
+    
     void OnTriggerEnter2D(Collider2D Player)
     {
         if(Player.tag =="Player"){
