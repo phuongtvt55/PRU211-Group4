@@ -100,7 +100,7 @@ public class DamageManage : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
-        if (gameObject.CompareTag("Knight") || gameObject.CompareTag("Boss"))
+        if (gameObject.CompareTag("Enemy") || gameObject.CompareTag("Boss"))
         {
             barController.SetHealth(CurrentHeath, MaxHeath);
         }
@@ -133,7 +133,7 @@ public class DamageManage : MonoBehaviour
         {
             CurrentHeath -= damage;
             IsUntouchable = true;
-            if (gameObject.CompareTag("Knight") || gameObject.CompareTag("Boss"))
+            if (gameObject.CompareTag("Enemy") || gameObject.CompareTag("Boss"))
             {                
                 barController.SetHealth(CurrentHeath, MaxHeath);
             }
