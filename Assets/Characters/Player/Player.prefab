@@ -520,6 +520,7 @@ MonoBehaviour:
   canDash: 1
   _isRunning: 0
   _isFacingRight: 1
+  spellCooldown: 5
 --- !u!114 &6244556269789356827
 MonoBehaviour:
   m_ObjectHideFlags: 0

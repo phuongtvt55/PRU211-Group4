@@ -172,6 +172,7 @@ public class PlayerController : MonoBehaviour
 
         if (isSpellOnCooldown)
         {
+            
             cooldownTimer -= Time.deltaTime;
 
             if (cooldownTimer <= 0f)
@@ -355,8 +356,8 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Dash());
         }
     }
-
-    public float spellCooldown = 5f;  // Cooldown duration in seconds
+    [SerializeField]
+    private float spellCooldown = 5f;  // Cooldown duration in seconds
     private bool isSpellOnCooldown = false;
     private float cooldownTimer = 0f;
 
