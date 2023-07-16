@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4d7b513fa08147944a265fa8ae76b99b
+  - enabled: 1
+    path: Assets/Scenes/BasicTutorial.unity
+    guid: b54c8d3e93d14b74a8cbf9fe9b869df7
+  - enabled: 1
+    path: Assets/Scenes/AdvancedTutorial.unity
+    guid: 6730c743d79bce44d8d9e8b7736eba99
+  - enabled: 1
+    path: Assets/Scenes/AboutUs.unity
+    guid: 032a0c7062343414195c9bddd7682f10
+  - enabled: 1
+    path: Assets/Scenes/GothicVillage.unity
+    guid: 7e41b9524cfd26e409b531155b5bcad9
   m_configObjects: {}
