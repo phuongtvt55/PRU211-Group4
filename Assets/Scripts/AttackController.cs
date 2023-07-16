@@ -7,16 +7,33 @@ public class AttackController : MonoBehaviour
     public int attackDame = 10;
     [SerializeField]
     private Vector2 knockBack = Vector2.zero;
-    
+
+    private bool enterTrap;
+    private float hitAgain = 2f;
+    private float lastHit;
+    private Collider2D collisionObject;
+    private void Update()
+    {
+        if (enterTrap)
+        {           
+            if(Time.time - lastHit > hitAgain)
+            {
+                OnTriggerEnter2D(collisionObject);
+            }
+        }
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Enter");
+        //   Debug.Log("Enter");
+        collisionObject = collision;
         GameObject parentObject = transform.parent.gameObject;
         
         DamageManage damage = collision.GetComponent<DamageManage>();
         if (damage != null)
         {
+
             bool hit = damage.TakeDame(attackDame);    
             if (hit)
             {
@@ -28,17 +45,29 @@ public class AttackController : MonoBehaviour
                     if(parentObject.transform.localScale.x > 0)
                     {
                         rb.velocity = new Vector2(knockBack.x, rb.velocity.y + knockBack.y);
+                        if (gameObject.CompareTag("Trap"))
+                        {
+                            enterTrap = true;
+                            lastHit = Time.time;
+                        }
                     }
                     else
                     {
                         rb.velocity = new Vector2(knockBack.x * -1, rb.velocity.y + knockBack.y);
                     }
                    
-
                 }
                
             }
         }
        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (gameObject.CompareTag("Trap"))
+        {
+            enterTrap = false;
+        }
     }
 }

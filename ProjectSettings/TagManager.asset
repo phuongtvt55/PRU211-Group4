@@ -9,13 +9,9 @@ TagManager:
   - Knight
   - DetectBoss
   - Enemy
-<<<<<<< HEAD
   - FallDetect
   - Checkpoint
-||||||| 7a2f245b
-=======
-  - NPC
->>>>>>> QuocHuy-1
+  - Trap
   layers:
   - Default
   - TransparentFX
@@ -29,8 +25,8 @@ TagManager:
   - PlayerHitBox
   - EnemyHitBox
   - GroundDetect
-  - NPC
-  - NPCInteraction
+  - 
+  - 
   - 
   - 
   - 
