@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Vector2 moveInput;
     Vector2 vecGravity;
+    private Vector2 respawnPoint;
+    [SerializeField]
+    private GameObject fallDetection;
     Animator animator;
 
     public float walkSpeed = 5f;
@@ -147,6 +150,8 @@ public class PlayerController : MonoBehaviour
         damageManage = GetComponent<DamageManage>();    
         //Gravity
         vecGravity = new Vector2 (0, -Physics2D.gravity.y);
+        //Respawnpoint
+        respawnPoint = transform.position;
     }
     // Start is called before the first frame update
     void Start()
@@ -159,7 +164,8 @@ public class PlayerController : MonoBehaviour
     {
         WallSlide();
         WallJump();
-
+        
+        fallDetection.transform.position = new Vector2(transform.position.x, fallDetection.transform.position.y);
     }
 
     private void FixedUpdate()
@@ -346,9 +352,18 @@ public class PlayerController : MonoBehaviour
         }
         else if(context.canceled && touchingDirections.IsGrounded) {
             CastSpell = false;  
+        }                 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("FallDetect"))
+        {
+            transform.position = respawnPoint;
+            damageManage.TakeDame(30);
+        }else if (collision.CompareTag("Checkpoint"))
+        {
+            respawnPoint = transform.position;  
         }
-        
-           
-       
     }
 }

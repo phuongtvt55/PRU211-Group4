@@ -9,6 +9,8 @@ TagManager:
   - Knight
   - DetectBoss
   - Enemy
+  - FallDetect
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
