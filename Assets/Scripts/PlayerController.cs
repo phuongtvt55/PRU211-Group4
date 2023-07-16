@@ -129,10 +129,13 @@ public class PlayerController : MonoBehaviour
     }
 
     private bool _castSpell;
+    float cooldown = 2f;
+    float lastCast;
     public bool CastSpell
     {
         set
         {
+            Debug.Log(value); 
             _castSpell = value;
             animator.SetBool(AnimationString.isCastSpell, value);
         }
@@ -166,6 +169,16 @@ public class PlayerController : MonoBehaviour
         WallJump();
         
         fallDetection.transform.position = new Vector2(transform.position.x, fallDetection.transform.position.y);
+
+        if (isSpellOnCooldown)
+        {
+            cooldownTimer -= Time.deltaTime;
+
+            if (cooldownTimer <= 0f)
+            {
+                isSpellOnCooldown = false;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -343,14 +356,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public float spellCooldown = 5f;  // Cooldown duration in seconds
+    private bool isSpellOnCooldown = false;
+    private float cooldownTimer = 0f;
+
+
     public void OnCastSpell(InputAction.CallbackContext context)
     {
-        if (context.started && touchingDirections.IsGrounded)
+     
+        if (context.started && touchingDirections.IsGrounded && !isSpellOnCooldown)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
             CastSpell = true;
+            isSpellOnCooldown = true;
+            cooldownTimer = spellCooldown;
         }
-        else if(context.canceled && touchingDirections.IsGrounded) {
+        else if(context.canceled && touchingDirections.IsGrounded) {            
             CastSpell = false;  
         }                 
     }

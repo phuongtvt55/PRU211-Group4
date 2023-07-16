@@ -443,7 +443,7 @@ Transform:
   - {fileID: 7925156530968364408}
   - {fileID: 2775472457273323298}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2741743600630152653
 SpriteRenderer:
@@ -509,6 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08008078c108eea49b08531be92c63e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fallDetection: {fileID: 2348319735410346471, guid: fdb7224ae4c88a7468329fdcc2f0d198, type: 3}
   walkSpeed: 5
   runSpeed: 8
   airWalkSpeed: 3
