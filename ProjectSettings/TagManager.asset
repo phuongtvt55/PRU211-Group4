@@ -9,6 +9,7 @@ TagManager:
   - Knight
   - DetectBoss
   - Enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -22,8 +23,8 @@ TagManager:
   - PlayerHitBox
   - EnemyHitBox
   - GroundDetect
-  - 
-  - 
+  - NPC
+  - NPCInteraction
   - 
   - 
   - 
