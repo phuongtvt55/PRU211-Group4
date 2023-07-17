@@ -17197,7 +17197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4821920857790900012, guid: c0ef2f0a60cd1574db48be12c8ea2a48, type: 3}
       propertyPath: attackDame
-      value: 100
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5642202837027876188, guid: c0ef2f0a60cd1574db48be12c8ea2a48, type: 3}
       propertyPath: player
