@@ -15,7 +15,7 @@ public class HitTimeController : StateMachineBehaviour
         necromance = animator.GetComponent<NecromanceController>();
         bringer = animator.GetComponent <BringerController>();   
         count++;
-        if(count == 3)
+        if(count == 4)
         {
             
             animator.SetTrigger(AnimationString.attackTrigger);

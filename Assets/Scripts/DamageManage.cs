@@ -42,6 +42,11 @@ public class DamageManage : MonoBehaviour
             {
                 if(gameObject.CompareTag("Player"))
                 {
+                   
+                    gameManagerScript.gameOver();
+                }
+                else if (gameObject.CompareTag("Boss"))
+                {
                     gameManagerScript.gameOver();
                 }
                 else

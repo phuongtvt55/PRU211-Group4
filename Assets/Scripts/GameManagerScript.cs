@@ -10,6 +10,12 @@ public class GameManagerScript : MonoBehaviour
 
     public void gameOver()
     {
+        StartCoroutine(gameoverScene());
+    }
+
+    IEnumerator gameoverScene()
+    {
+        yield return new WaitForSeconds(2f);
         gameOverUI.SetActive(true);
     }
 
