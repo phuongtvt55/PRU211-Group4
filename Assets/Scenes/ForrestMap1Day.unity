@@ -15012,6 +15012,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5930148456262044286, guid: 9a187f113a35bdd439f4f2141a78162d, type: 3}
+      propertyPath: loop
+      value: 
+      objectReference: {fileID: 8300000, guid: 54b2bfcdaed66f144a89073942c39cf9, type: 3}
+    - target: {fileID: 5930148456262044286, guid: 9a187f113a35bdd439f4f2141a78162d, type: 3}
+      propertyPath: intro
+      value: 
+      objectReference: {fileID: 8300000, guid: b0c316f7262b219409251a4c7647352f, type: 3}
     - target: {fileID: 8080715239686911400, guid: 9a187f113a35bdd439f4f2141a78162d, type: 3}
       propertyPath: m_Name
       value: AudioMenu
