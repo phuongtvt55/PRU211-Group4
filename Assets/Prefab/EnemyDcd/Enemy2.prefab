@@ -65,7 +65,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5574925, y: 0.021874905}
+  m_Offset: {x: 0.9712639, y: -1.1677184}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.69783354, y: 0.5233927}
+  m_Size: {x: 4.3528147, y: 2.9025793}
   m_EdgeRadius: 0
 --- !u!114 &4836985150824663524
 MonoBehaviour:
@@ -125,7 +125,7 @@ Transform:
   - {fileID: 8647611199051806751}
   - {fileID: 8848338185591286779}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509897473943397144
 GameObject:
@@ -600,7 +600,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &6981010448432102349
 SpriteRenderer:
@@ -713,6 +713,7 @@ MonoBehaviour:
   _maxHeath: 100
   playerHealthBar: {fileID: 0}
   gameManagerScript: {fileID: 0}
+  bossHealthBar: {fileID: 0}
   _currentHeath: 100
   _isUntouchable: 0
   untouchableTime: 0.5

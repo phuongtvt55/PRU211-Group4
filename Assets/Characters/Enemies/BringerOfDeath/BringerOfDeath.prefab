@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4379830325476331241}
   m_Layer: 8
   m_Name: BringerOfDeath
-  m_TagString: Boss
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,8 +187,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barController: {fileID: 8215060354271864355}
-  _maxHeath: 100
-  _currentHeath: 100
+  _maxHeath: 200
+  playerHealthBar: {fileID: 0}
+  gameManagerScript: {fileID: 0}
+  bossHealthBar: {fileID: 0}
+  _currentHeath: 200
   _isUntouchable: 0
   untouchableTime: 0.3
 --- !u!114 &4379830325476331241

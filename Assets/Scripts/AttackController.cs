@@ -9,7 +9,7 @@ public class AttackController : MonoBehaviour
     private Vector2 knockBack = Vector2.zero;
 
     private bool enterTrap;
-    private float hitAgain = 2f;
+    private float hitAgain = 1.5f;
     private float lastHit;
     private Collider2D collisionObject;
     private void Update()
@@ -18,6 +18,7 @@ public class AttackController : MonoBehaviour
         {           
             if(Time.time - lastHit > hitAgain)
             {
+                //Debug.Log("Enter again");
                 OnTriggerEnter2D(collisionObject);
             }
         }
@@ -42,14 +43,16 @@ public class AttackController : MonoBehaviour
                 
                 if (!collision.CompareTag("Boss"))
                 {
-                    if(parentObject.transform.localScale.x > 0)
+                    if (gameObject.CompareTag("Trap") || gameObject.CompareTag("Fire"))
+                    {
+                        Debug.Log("ENter trap");
+                        enterTrap = true;
+                        lastHit = Time.time;
+                    }
+                    if (parentObject.transform.localScale.x > 0)
                     {
                         rb.velocity = new Vector2(knockBack.x, rb.velocity.y + knockBack.y);
-                        if (gameObject.CompareTag("Trap"))
-                        {
-                            enterTrap = true;
-                            lastHit = Time.time;
-                        }
+                        
                     }
                     else
                     {
@@ -65,7 +68,7 @@ public class AttackController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (gameObject.CompareTag("Trap"))
+        if (gameObject.CompareTag("Trap") || gameObject.CompareTag("Fire"))
         {
             enterTrap = false;
         }

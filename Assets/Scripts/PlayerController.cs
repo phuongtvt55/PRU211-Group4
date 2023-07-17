@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
     {
         set
         {
-            Debug.Log(value); 
+           // Debug.Log(value); 
             _castSpell = value;
             animator.SetBool(AnimationString.isCastSpell, value);
         }
@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour
         {
             
             cooldownTimer -= Time.deltaTime;
-
+            Debug.Log(cooldownTimer);
             if (cooldownTimer <= 0f)
             {
                 isSpellOnCooldown = false;
@@ -369,11 +369,12 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
             CastSpell = true;
+            
+        }
+        else if(context.canceled && touchingDirections.IsGrounded && !isSpellOnCooldown) {            
+            CastSpell = false;
             isSpellOnCooldown = true;
             cooldownTimer = spellCooldown;
-        }
-        else if(context.canceled && touchingDirections.IsGrounded) {            
-            CastSpell = false;  
         }                 
     }
 

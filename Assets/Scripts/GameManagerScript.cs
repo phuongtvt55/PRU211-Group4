@@ -20,7 +20,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void mainMenu()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void quit()

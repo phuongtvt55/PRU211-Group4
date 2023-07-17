@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6994761291439725185}
   - component: {fileID: 3500341984480963960}
   - component: {fileID: 540211730971924034}
-  - component: {fileID: 2529549953350111060}
+  - component: {fileID: -3279206281281678149}
   m_Layer: 10
   m_Name: RangeAtck
   m_TagString: Untagged
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: {fileID: 5405240634541906046}
   speed: 5
---- !u!114 &2529549953350111060
+--- !u!114 &-3279206281281678149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,8 +224,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 951142670772300513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb653ed14ceac0a409cc14645a29472c, type: 3}
+  m_Script: {fileID: 11500000, guid: ebe934691c0332a4789edf1efadda1e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attackDame: 10
+  moveSpeed: {x: 10, y: 0}
   knockBack: {x: 0, y: 0}

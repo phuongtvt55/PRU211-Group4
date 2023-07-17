@@ -13,6 +13,8 @@ public class DamageManage : MonoBehaviour
     private HealthBarPlayerScript playerHealthBar;
     [SerializeField]
     private GameManagerScript gameManagerScript;
+    [SerializeField]
+    private HealthBarPlayerScript bossHealthBar;
     public int MaxHeath
     {
         get
@@ -100,9 +102,14 @@ public class DamageManage : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
-        if (gameObject.CompareTag("Enemy") || gameObject.CompareTag("Boss"))
+        if (gameObject.CompareTag("Enemy"))
         {
             barController.SetHealth(CurrentHeath, MaxHeath);
+        }
+
+        if (gameObject.CompareTag("Boss"))
+        {
+            bossHealthBar.InitHealthBar(CurrentHeath);
         }
 
         if (gameObject.CompareTag("Player"))
@@ -133,9 +140,13 @@ public class DamageManage : MonoBehaviour
         {
             CurrentHeath -= damage;
             IsUntouchable = true;
-            if (gameObject.CompareTag("Enemy") || gameObject.CompareTag("Boss"))
+            if (gameObject.CompareTag("Enemy"))
             {                
                 barController.SetHealth(CurrentHeath, MaxHeath);
+            }
+            if (gameObject.CompareTag("Boss"))
+            {
+                bossHealthBar.ActualHealth(CurrentHeath);
             }
             if (gameObject.CompareTag("Player"))
             {

@@ -26,6 +26,7 @@ public class HealthBarPlayerScript : MonoBehaviour
 
     public void InitHealthBar(float actualHealth)
     {
+        gameObject.SetActive(true);
         slider = GetComponent<Slider>();
         animator = GetComponent<Animator>();        
         MaximumHealth(actualHealth);

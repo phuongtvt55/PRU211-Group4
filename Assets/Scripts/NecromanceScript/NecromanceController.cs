@@ -33,7 +33,7 @@ public class NecromanceController : MonoBehaviour
         animator.SetFloat(AnimationString.distance, distance);
 
         
-        if(necromanceDamageManager.CurrentHeath <= 50 && !isStage2 && necromanceDamageManager.IsAlive)
+        if(necromanceDamageManager.CurrentHeath <= 250 && !isStage2 && necromanceDamageManager.IsAlive)
         {
             isStage2 = true;
             animator.SetBool("isStage2", isStage2);

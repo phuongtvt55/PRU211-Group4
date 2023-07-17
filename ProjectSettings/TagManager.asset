@@ -12,6 +12,8 @@ TagManager:
   - FallDetect
   - Checkpoint
   - Trap
+  - NPC
+  - Fire
   layers:
   - Default
   - TransparentFX
