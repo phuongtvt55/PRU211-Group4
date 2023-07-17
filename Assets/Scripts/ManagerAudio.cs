@@ -10,8 +10,11 @@ public class ManagerAudio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (!SceneManager.GetActiveScene().name.Equals("MainMenu") || !SceneManager.GetActiveScene().name.Equals("AboutUs") || !SceneManager.GetActiveScene().name.Equals("BasicTutorial"))
+        {
+            Debug.Log("Enter");
             AudioMenu.instance.Play(intro, loop);
+        }
         
     }
 

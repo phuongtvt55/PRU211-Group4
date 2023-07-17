@@ -1769,6 +1769,10 @@ PrefabInstance:
       propertyPath: introGothic
       value: 
       objectReference: {fileID: 8300000, guid: da69ae4cada13354d9221a42bddc66f5, type: 3}
+    - target: {fileID: 7348856836141065321, guid: 9a187f113a35bdd439f4f2141a78162d, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8080715239686911400, guid: 9a187f113a35bdd439f4f2141a78162d, type: 3}
       propertyPath: m_Name
       value: AudioMenu

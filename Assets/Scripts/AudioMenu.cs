@@ -16,8 +16,7 @@ public class AudioMenu : MonoBehaviour
     public static AudioMenu instance;
     private void Awake()
     {
-        //Debug.Log(SceneManager.GetActiveScene().name);
-        Scene currentScene = SceneManager.GetActiveScene();
+        
         
         if (instance == null)
         {
