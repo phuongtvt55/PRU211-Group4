@@ -1267,7 +1267,7 @@ GameObject:
   - component: {fileID: 523845475}
   - component: {fileID: 523845473}
   - component: {fileID: 523845474}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: HatMan
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2406,7 +2406,7 @@ GameObject:
   - component: {fileID: 761716512}
   - component: {fileID: 761716510}
   - component: {fileID: 761716511}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Woman
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -2856,7 +2856,7 @@ GameObject:
   - component: {fileID: 796556323}
   - component: {fileID: 796556321}
   - component: {fileID: 796556322}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: OldMan
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -3162,7 +3162,7 @@ GameObject:
   - component: {fileID: 826809903}
   - component: {fileID: 826809908}
   - component: {fileID: 826809911}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Bearded
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -4431,7 +4431,7 @@ GameObject:
   - component: {fileID: 1079103882}
   - component: {fileID: 1079103884}
   - component: {fileID: 1079103883}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: DialogueTrigger
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -4522,7 +4522,7 @@ GameObject:
   - component: {fileID: 1092292044}
   - component: {fileID: 1092292046}
   - component: {fileID: 1092292045}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: DialogueTrigger
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -6225,7 +6225,7 @@ GameObject:
   - component: {fileID: 1574799780}
   - component: {fileID: 1574799782}
   - component: {fileID: 1574799781}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: DialogueTrigger
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -13515,7 +13515,7 @@ GameObject:
   - component: {fileID: 1745188384}
   - component: {fileID: 1745188385}
   - component: {fileID: 1745188386}
-  m_Layer: 13
+  m_Layer: 14
   m_Name: DialogueTrigger
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -13972,7 +13972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1853585849}
   - component: {fileID: 1853585850}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -28,8 +28,8 @@ TagManager:
   - EnemyHitBox
   - GroundDetect
   - Candy
-  - 
-  - 
+  - NPC
+  - NPCInteract
   - 
   - 
   - 
