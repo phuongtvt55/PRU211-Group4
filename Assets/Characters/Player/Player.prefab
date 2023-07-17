@@ -520,6 +520,8 @@ MonoBehaviour:
   canDash: 1
   _isRunning: 0
   _isFacingRight: 1
+  intro: {fileID: 8300000, guid: da69ae4cada13354d9221a42bddc66f5, type: 3}
+  loop: {fileID: 8300000, guid: b844a37c0acdb7e47b2973e6298bc355, type: 3}
   spellCooldown: 5
 --- !u!114 &6244556269789356827
 MonoBehaviour:
@@ -842,6 +844,7 @@ MonoBehaviour:
   _maxHeath: 100
   playerHealthBar: {fileID: 0}
   gameManagerScript: {fileID: 0}
+  bossHealthBar: {fileID: 0}
   _currentHeath: 100
   _isUntouchable: 0
   untouchableTime: 0.5
