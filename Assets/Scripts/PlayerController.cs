@@ -175,7 +175,7 @@ public class PlayerController : MonoBehaviour
         {
             
             cooldownTimer -= Time.deltaTime;
-            Debug.Log(cooldownTimer);
+       
             if (cooldownTimer <= 0f)
             {
                 isSpellOnCooldown = false;
@@ -363,7 +363,8 @@ public class PlayerController : MonoBehaviour
     private float spellCooldown = 5f;  // Cooldown duration in seconds
     private bool isSpellOnCooldown = false;
     private float cooldownTimer = 0f;
-
+    [SerializeField]
+    private SpellCoolDownUI spellCoolDownUI;
 
     public void OnCastSpell(InputAction.CallbackContext context)
     {
@@ -374,10 +375,12 @@ public class PlayerController : MonoBehaviour
             CastSpell = true;
             
         }
-        else if(context.canceled && touchingDirections.IsGrounded && !isSpellOnCooldown) {            
+        else if(context.canceled && touchingDirections.IsGrounded && !isSpellOnCooldown) {
+            Debug.Log("Enter");
             CastSpell = false;
             isSpellOnCooldown = true;
             cooldownTimer = spellCooldown;
+            spellCoolDownUI.UseSpell();
         }                 
     }
 

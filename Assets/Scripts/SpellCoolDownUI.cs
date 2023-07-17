@@ -24,10 +24,7 @@ public class SpellCoolDownUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(1))
-        {
-            UseSpell();
-        }
+        
         if (isCooldown)
         {
             ApplyCooldown();

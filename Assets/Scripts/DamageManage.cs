@@ -157,7 +157,10 @@ public class DamageManage : MonoBehaviour
             {
                 playerHealthBar.ActualHealth(CurrentHeath);
             }
-            animator.SetTrigger(AnimationString.hitTrigger);
+            if(damage > 0)
+            {
+                animator.SetTrigger(AnimationString.hitTrigger);
+            }
             return true;
         }
         
