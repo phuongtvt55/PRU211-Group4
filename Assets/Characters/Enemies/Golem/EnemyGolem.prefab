@@ -678,6 +678,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 9037619695337467805}
     m_Modifications:
     - target: {fileID: 649901574034969941, guid: 372e26351f4f61c48a7546285650a08b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 649901574034969941, guid: 372e26351f4f61c48a7546285650a08b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -763,6 +767,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2144828811007517096, guid: 372e26351f4f61c48a7546285650a08b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4825967758581470556, guid: 372e26351f4f61c48a7546285650a08b, type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7431356375663833918, guid: 372e26351f4f61c48a7546285650a08b, type: 3}
